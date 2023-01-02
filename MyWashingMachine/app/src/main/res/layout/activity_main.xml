@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DFDFDF">
+
+    <TextView
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ΕΜΦΑΝΙΣΗ"
+        android:textColor="#C9000000"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:elevation="2dp"
+        android:layout_centerHorizontal="true">
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/show_machine_state"
+        android:layout_width="150dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:layout_centerHorizontal="true"
+        android:scaleY="1.6"
+        android:background="@drawable/circle">
+    </ImageButton>
+
+<!--    <TextView-->
+<!--        android:id="@+id/monitor"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text=" ΟΘΟΝΗΣ"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="18sp"-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_toRightOf="@+id/show_machine_state">-->
+<!--    </TextView>-->
+
+    <RelativeLayout
+        android:id="@+id/machine_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/custom_button"
+        android:elevation="7dp"
+        android:translationZ="4dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="ΠΛΥΝΤΗΡΙΟ : "
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="15dp"
+                    style="@style/Theme.Machine.State.Tecture"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    style="@style/Theme.Machine.State.Tecture"
+                    android:text="ON"
+                    android:layout_marginTop="5dp">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    style="@style/Theme.Machine.State.Tecture"
+                    android:text="ΕΚΚΙΝΗΣΗ : "
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/profile_time_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    style="@style/Theme.Machine.State.Tecture"
+                    android:text="- - : - -">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    style="@style/Theme.Machine.State.Tecture"
+                    android:text="ΠΟΡΤΑ : "
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="15dp">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/door_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/unlock_24"
+                    android:layout_marginBottom="2dp">
+                </ImageView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="end">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="@color/white"
+                    android:text="ΘΕΡΜΟΚΡΑΣΙΑ : "
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/profile_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="0"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="end">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="@color/white"
+                    android:text="ΔΙΑΡΚΕΙΑ : "
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/profile_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="0"
+                    android:layout_marginEnd="15dp">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="end">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="@color/white"
+                    android:text="ΣΤΡΟΦΕΣ : "
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/profile_spins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="15dp">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ΑΠΟΚΡΥΨΗ "
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:elevation="4dp"
+            android:layout_alignBottom="@+id/settings"
+            android:layout_centerHorizontal="true">
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/hide_machine_state"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerInParent="true"
+            android:layout_alignBottom="@+id/settings"
+            android:background="@drawable/dark_circle"
+            android:scaleY="2.2">
+        </ImageButton>
+
+<!--        <TextView-->
+<!--            android:id="@+id/monitor1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text=" ΟΘΟΝΗΣ"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_alignBottom="@+id/settings"-->
+<!--            android:layout_toRightOf="@+id/hide_machine_state">-->
+<!--        </TextView>-->
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/black"
+        android:layout_below="@+id/machine_state">
+    </View>
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="ΠΡΟΓΡΑΜΜΑΤΑ"-->
+<!--        android:textSize="26sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:padding="5dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:textStyle="bold"-->
+<!--        android:background="@drawable/textview_outline"-->
+<!--        android:elevation="7dp"-->
+<!--        android:translationZ="4dp">-->
+<!--    </TextView>-->
+
+    <RelativeLayout
+        android:id="@+id/list_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:layout_above="@+id/divider2">
+
+        <ListView
+            android:id="@+id/washing_program_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+        </ListView>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_above="@+id/activities">
+    </View>
+
+    <LinearLayout
+        android:id="@+id/activities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ΕΚΚΙΝΗΣΗ ΠΛΥΣΗΣ"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="26sp"
+            style="@style/Widget.App.Button">
+        </Button>
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="26sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="ΔΗΜΙΟΥΡΓΙΑ ΠΡΟΓΡΑΜΜΑΤΟΣ"
+            android:layout_below="@id/divider1"
+            style="@style/Widget.App.Button"
+            />
+
+<!--        <Button-->
+<!--            android:id="@+id/back_button"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="ΠΙΣΩ ΣΤΟ ΜΕΝΟΥ"-->
+<!--            android:textSize="26sp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            style="@style/Widget.App.Button">-->
+<!--        </Button>-->
+
+    </LinearLayout>
+</RelativeLayout>

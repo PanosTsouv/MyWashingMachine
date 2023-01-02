@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyWashingMachine</string>
+
+
+    <string name="descriptionTitle">
+        <u>ΠΛΗΡΟΦΟΡΙΕΣ</u>
+    </string>
+    <string name="hint"><font size="20">Εισάγετε\nΔιάρκεια</font></string>
+</resources>

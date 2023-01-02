@@ -1,0 +1,122 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyWashingMachine" parent="Theme.AppCompat">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#3b4349</item>
+        <!-- Secondary brand color. -->
+    </style>
+
+    <style name="TextHintLabel" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button</item>
+        <item name="shapeAppearance">@style/AppShapeAppearance.SmallComponent</item>
+        <item name="strokeColor">#000000</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:textColor">#C9000000</item>
+    </style>
+
+    <style name="Widget.App.Button_monitor" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button_monitor</item>
+        <item name="shapeAppearance">@style/AppShapeAppearance.SmallComponent</item>
+        <item name="android:textColor">#C9000000</item>
+    </style>
+    <style name="ThemeOverlay.App.Button_monitor" parent="">
+        <item name="colorPrimary">#DFDFDF</item>
+        <item name="colorOnPrimary">#A39898</item>
+    </style>
+
+    <style name="Widget.App.Button.Down.Icon" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button.Down.Icon</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Button.Down.Icon" parent="">
+        <item name="colorPrimary">#C9000000</item>
+        <item name="colorOnPrimary">#A39898</item>
+    </style>
+
+    <style name="Widget.App.Button.Up.Icon" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button.Up.Icon</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Button.Up.Icon" parent="">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">#A39898</item>
+    </style>
+
+    <style name="Widget.App.Button.Plus.Icon" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button.Plus.Icon</item>
+        <item name="shapeAppearance">@style/AppShapeAppearance.SmallComponent</item>
+        <item name="strokeColor">#65FFFFFF</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="elevation">7dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:translationZ">4dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Button.Plus.Icon" parent="">
+        <item name="colorPrimary">#434343</item>
+        <item name="colorOnPrimary">#A39898</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Button" parent="">
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorOnPrimary">#A39898</item>
+    </style>
+
+    <style name="AppShapeAppearance.SmallComponentIcon" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">200dp</item>
+    </style>
+
+    <style name="AppShapeAppearance.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">200dp</item>
+    </style>
+
+    <style name="Theme.Machine.State.Tecture" parent = "">
+        <item name = "android:textColor">@color/white</item>
+    </style>
+
+
+    <!--EDIT TEXT STYLE-->
+    <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.TextInputLayout</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="hintTextColor">?attr/colorOnSurface</item>
+        <item name="strokeWidth">4dp</item>
+        <item name="strokeColor">@color/black</item>
+    </style>
+
+    <style name="ThemeOverlay.App.TextInputLayout" parent="">
+        <item name="colorPrimary">#D000FF</item>
+        <item name="colorOnSurface">#7A0083</item>
+        <item name="colorError">#FF0000</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.App.Caption</item>
+    </style>
+
+    <style name="TextAppearance.App.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">serif</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">serif</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+</resources>

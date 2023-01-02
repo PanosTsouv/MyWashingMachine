@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Υπάρχει είδη πλύση σε εκτέλεση.Αν ξεκινήσετε καινούργια πλύση η παλιά θα ακυρωθεί.Είστε σίγουροι πως θέλετε να ξεκινήσετε καινούργια πλύση?"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message"
+        android:orientation="horizontal"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/decline_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="OXI"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:background="#3b4349"
+            android:padding="15dp">
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirm_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="NAI"
+            android:maxLines="1"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:background="#3b4349">
+        </androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+</RelativeLayout>
